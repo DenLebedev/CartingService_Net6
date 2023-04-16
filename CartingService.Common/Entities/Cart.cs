@@ -3,6 +3,6 @@
     public class Cart
     {
         public int Id { get; set; }
-        public List<int> ItemsIDs { get; set; }
+        public List<Item> Items { get; set; }
     }
 }
