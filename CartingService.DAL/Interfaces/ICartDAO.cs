@@ -7,5 +7,6 @@ namespace CartingService.DAL.Interfaces
         Cart GetCart(int id);
         bool AddItemToCart(int cartId, Item item);
         bool RemoveItemFromCart(int cartId, int itemId);
+        public bool AddCart(Cart cart);
     }
 }

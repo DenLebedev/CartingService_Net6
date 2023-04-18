@@ -54,7 +54,7 @@ namespace CartingService.DAL
             }
             else
             {
-                var item = cart.Items.FirstOrDefault(x => x.Id == cartId);
+                var item = cart.Items.FirstOrDefault(x => x.Id == itemId);
                 if (item == null)
                 {
                     return false;
@@ -63,6 +63,28 @@ namespace CartingService.DAL
                 {
                     cart.Items.Remove(item);
                     return cartSet.Update(cart);
+                }
+            }
+        }
+
+        public bool AddCart(Cart cart) 
+        {
+            var cartSet = GetAllCarts();
+            if (cartSet == null)
+            {
+                return false;
+            }
+            else
+            {
+                var cartInSet = cartSet.Find(x => x.Id == cart.Id).FirstOrDefault();
+                if (cartInSet == null) 
+                {
+                    cartSet.Insert(cart);
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
         }
