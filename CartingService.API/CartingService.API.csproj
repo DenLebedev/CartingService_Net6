@@ -8,10 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.5" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.100.115" />
     <PackageReference Include="LiteDB" Version="5.0.16" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
